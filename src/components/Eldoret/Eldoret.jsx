@@ -3,11 +3,11 @@ import './eldoret.css';
 
 const Eldoret = ({ onBack }) => {
     return (
-        <div> 
+        <div > 
             <button onClick={onBack} className="back-button">
                 <span className="arrow">←</span>
             </button>
-            <div className="locations-container">
+            <div className="locations-container ">
                 <div className="location-box" onClick={() => window.location.href = ''}>Action</div>
                 <div className="location-box" onClick={() => window.location.href = 'places/annex.html'}>Annex</div>
                 <div className="location-box" onClick={() => window.location.href = 'places/chinese.html'}>Chinese</div>

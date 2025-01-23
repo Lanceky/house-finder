@@ -4,7 +4,7 @@ import './about.css';
 import key from '../../assets/key.jpg'
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container" id='About'>
       <div className="about-wrapper">
         <h1 className="about-title">About House Hunters</h1>
         

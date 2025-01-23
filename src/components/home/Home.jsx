@@ -40,7 +40,7 @@ const Home = () => {
                         <option value="kisumu">Kisumu</option>
                     </select>
                     <br />
-                    <button type="submit">Explore</button>
+                    <button type="submit" >Explore</button>
                 </form>
             </div>
         </div>
