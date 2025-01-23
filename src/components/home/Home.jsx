@@ -9,7 +9,7 @@ const Home = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         const county = document.getElementById('countySelect').value;
-        
+
         if (county === "Eldoret") {
             setSelectedLocation('Eldoret');
         } else {
@@ -17,9 +17,11 @@ const Home = () => {
         }
     };
 
-    // If Eldoret is selected, render Eldoret component
+    // If Eldoret is selected, render Eldoret component with a back button
     if (selectedLocation === 'Eldoret') {
-        return <Eldoret />;
+        return (
+            <Eldoret onBack={() => setSelectedLocation(null)} />
+        );
     }
 
     return (

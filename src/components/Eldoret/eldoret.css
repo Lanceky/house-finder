@@ -1,3 +1,31 @@
+.back-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Changed from left to right */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.arrow {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: -2px;
+}
 
 .locations-container {
     display: flex;
@@ -7,13 +35,14 @@
     padding: 40px;
 }
 .location-box {
-    background-color: rgba(7, 81, 166, 0.9); /* Royal purple background */
-    color: white;
+    background: linear-gradient(135deg, #4281d3, #3b79a9); /* Royal purple background */
+    color: whitesmoke;
     padding: 30px; /* Increased padding for larger boxes */
-    border-radius: 15px; /* More rounded corners */
+    border-radius: 10px; /* More rounded corners */
     width: 250px; /* Increased width */
     text-align: center;
-    font-size: 18px; /* Larger font */
+    font-size: 18px;
+    font-family: sans-serif; /* Larger font */
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s ease;
     
