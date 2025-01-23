@@ -30,8 +30,9 @@
 }
 
 .gpt3__navbar-links_logo img {
-    width: 62.56px;
-    height: 16.02px;
+    width: 100.56px;
+    height: 50.02px;
+    border-radius: 50px;
 }
 
 .gpt3__navbar-links_container {
@@ -64,7 +65,7 @@
 .gpt3__navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #ff4820;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     border-radius: 5px;
     font-family: var(--font-family);
     font-weight: 500;
@@ -136,9 +137,11 @@
 @media screen and (max-width: 700px) {
     .gpt3__navbar{
         padding: 2rem 4rem;
+        z-index: 1;
     }
     .gpt3__navbar-menu_container-links-sign{
         display: none;
+        z-index: 1;
     }
 }
 @media screen and (max-width: 550px) {
@@ -155,6 +158,7 @@
     }
     .gpt3__navbar-menu_container{
         top: 20px;
+        z-index: 1;
         background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
         /* safari 5.1+,chrome 10+ */

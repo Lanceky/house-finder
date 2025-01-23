@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
-import { Navbar, Hero, About, Eldoret, Home} from './components'
+import { Navbar, Hero, About, Home} from './components'
+
 const App = () => {
   return (
     <div>
@@ -8,7 +9,7 @@ const App = () => {
       <Home />
       <Hero />
       <About/>
-      <Eldoret />
+      
 
     </div>
   )

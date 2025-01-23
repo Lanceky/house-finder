@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3a5f, #3b79a9); /* Deep teal to softer blue */
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Adjust height dynamically */
+    padding: 20px;
+    flex-direction: row; /* Default layout: Row for large screens */
+    margin-top: 70px; /* Space from navbar */
+}
+
+/* Left Side Styling */
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side img {
+    animation: bulgeAndShake 3s infinite alternate;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add depth */
+}
+
+/* Keyframe Animation */
+@keyframes bulgeAndShake {
+    0% {
+        transform: scale(1) translateX(-2px);
+    }
+    100% {
+        transform: scale(1.1) translateX(2px);
+    }
+}
+
+/* Right Side Styling */
+.right-side {
+    flex: 1;
+    height: fit-content; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+    background: linear-gradient(135deg, #4facfe, #00f2fe); /* Sky blue to aqua gradient */
+}
+.right-side h2 {
+    color: #4c1d95; /* Purple header color */
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+select, button {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #333;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+select {
+    box-shadow: 0 0 10px rgba(93, 0, 255, 0.6); /* Neon green edges */
+}
+
+select:hover {
+    background-color: linear-gradient(135deg, #1e3a5f, #3b79a9); 
+    box-shadow: 0 0 15px rgba(81, 0, 255, 0.8);
+}
+
+button {
+    background-color: #4c1d95; /* Purple button */
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(76, 0, 255, 0.6); /* Neon green edges */
+}
+
+button:hover {
+    background-color: #3b136f; /* Darker purple on hover */
+    box-shadow: 0 0 15px rgba(76, 0, 255, 0.8);
+}
+
+button:active {
+    background-color: #2a0e50;
+    box-shadow: 0 0 20px rgb(111, 0, 255);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Extra Small Devices (Portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .main-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    /* Ensure image appears below the right-side */
+    .right-side {
+        order: 1; /* Right-side section comes first */
+    }
+
+    .left-side {
+        order: 2; /* Image comes after the right-side */
+    }
+
+    .left-side, .right-side {
+        flex: none;
+        width: 100%; /* Full width for both sections */
+        padding: 10px; /* Less padding for smaller screens */
+    }
+
+    .left-side img {
+        max-width: 350px;
+        margin-top: 20px; /* Space between sections */
+        width: 90%; /* Dynamically adjust width */
+    }
+
+    .right-side h2 {
+        font-size: 24px; /* Reduce font size */
+    }
+}
+
+/* Small Devices (Tablets and larger phones, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    /* Ensure image appears below the right-side */
+    .right-side {
+        order: 1; /* Right-side section comes first */
+    }
+
+    .left-side {
+        order: 2; /* Image comes after the right-side */
+    }
+
+    .left-side, .right-side {
+        flex: none;
+        width: 100%; /* Full width for both sections */
+        padding: 15px;
+    }
+
+    .left-side img {
+        max-width: 400px;
+        margin-top: 30px;
+        width: 90%; /* Still responsive width */
+    }
+}
+
+/* Medium Devices (Tablets, 768px to 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .main-container {
+        flex-direction: row; /* Row layout for medium devices */
+    }
+
+    .left-side img {
+        max-width: 450px;
+    }
+
+    .right-side {
+        padding: 30px;
+    }
+}
+
+/* Large Devices (Desktops, 992px and above) */
+@media (min-width: 992px) {
+    .main-container {
+        flex-direction: row; /* Default layout */
+    }
+
+    .left-side img {
+        max-width: 450px;
+    }
+
+    .right-side {
+        padding: 40px;
+    }
+}
