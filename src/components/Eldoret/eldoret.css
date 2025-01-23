@@ -1,0 +1,24 @@
+
+.locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Increased gap for better spacing */
+    padding: 40px;
+}
+.location-box {
+    background-color: rgba(102, 51, 153, 0.9); /* Royal purple background */
+    color: white;
+    padding: 30px; /* Increased padding for larger boxes */
+    border-radius: 15px; /* More rounded corners */
+    width: 250px; /* Increased width */
+    text-align: center;
+    font-size: 18px; /* Larger font */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(102, 51, 153, 0.6); /* Neon purple glow */
+}
+.location-box:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+    box-shadow: 0 0 20px rgba(102, 51, 153, 0.8), 0 0 25px rgba(173, 216, 230, 0.8); /* Purple and light blue neon glow */
+}
