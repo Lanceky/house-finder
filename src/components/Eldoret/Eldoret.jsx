@@ -19,8 +19,8 @@ const Eldoret = () => {
         <div className="location-box" onclick="window.location.href='places/action.html'">Action</div>
         <div className="location-box" onclick="window.location.href='places/jerusalem.html'">Jerusalem</div>
         <div className="location-box" onclick="window.location.href='places/kimumu.html'">Kimumu</div>
-        <div class="location-box" onclick="window.location.href='places/chinese.html'">Chinese</div>
-        <div class="location-box" onclick="window.location.href='places/outspan.html'">Outspan</div>
+        <div className="location-box" onclick="window.location.href='places/chinese.html'">Chinese</div>
+        <div className="location-box" onclick="window.location.href='places/outspan.html'">Outspan</div>
     </div></div>
   )
 }
