@@ -1,15 +1,15 @@
 import React from 'react'
 import './App.css'
-import { Navbar, Hero, About, Home} from './components'
-import Place from './places/Action/Action'
+import { Navbar, Hero, About, Home, Contact} from './components'
+
 const App = () => {
   return (
     <div>
       <Navbar />
       <Home />
       <About/>
-      <Hero />
-      <Place />
+      <Contact />
+    
     </div>
   )
 }

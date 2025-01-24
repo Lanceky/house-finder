@@ -51,6 +51,7 @@ const Eldoret = ({ onBack }) => {
                             onClick={() => handlePlaceClick(place)}
                         >
                             {place}
+                            
                         </div>
                     ))
                 ) : (
