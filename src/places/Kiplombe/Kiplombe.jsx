@@ -1,5 +1,5 @@
 import React from "react";
-import "./Action.css";
+import  "./Kiplombe.css"
 
 const Place = () => {
   return (

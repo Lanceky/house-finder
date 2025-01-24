@@ -1,12 +1,12 @@
 import React from "react";
-import "./Action.css";
+import "./Outspan.css";
 
 const Place = () => {
   return (
     <div className="place-container">
       <div className="place-info-wrapper">
         <div className="place-info">
-          <h2>Action Location</h2>
+          <h2>Outspan Location</h2>
           <div className="place-details">
             <p>
               <span className="icon">📅</span>Last Updated: 18.1.2025 <br />

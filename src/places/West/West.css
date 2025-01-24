@@ -5,21 +5,21 @@
     align-items: flex-start;
     padding: 20px;
     font-family: Arial, sans-serif;
-    gap: 20px; /* Space between the two sections */
+    gap: 20px; 
   }
   
   .place-info-wrapper {
-    background-color: #f8f9fa; /* Light gray shade */
-    border: 1px solid #ddd; /* Subtle border */
+    background-color: #f8f9fa; 
+    border: 1px solid #ddd; 
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    width: 600px; /* Same width as the map */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px; 
     height: 400px;
   }
   
   .place-info {
-    width: 100%; /* Ensures content fills the wrapper */
+    width: 100%; 
   }
   
   .place-info h2 {
@@ -45,7 +45,7 @@
     height: 400px;
   }
   
-  /* Responsive Design */
+
   @media screen and (max-width: 768px) {
     .place-container {
       flex-direction: column;
@@ -54,16 +54,16 @@
   
     .place-info-wrapper,
     .map-container iframe {
-      width: 100%; /* Full width for smaller devices */
+      width: 100%; 
       height: auto;
     }
   
     .place-info-wrapper {
-      margin-bottom: 20px; /* Space between sections */
+      margin-bottom: 20px; 
     }
   
     .map-container iframe {
-      height: 300px; /* Adjusted height for smaller screens */
+      height: 300px;
     }
   }
   

@@ -1,16 +1,17 @@
 import React from "react";
-import "./Action.css";
+import "./Annex.css";
 
 const Place = () => {
   return (
     <div className="place-container">
       <div className="place-info-wrapper">
         <div className="place-info">
-          <h2>Action Location</h2>
+          <h2>Annex Location</h2>
           <div className="place-details">
             <p>
-              <span className="icon">📅</span>Last Updated: 18.1.2025 <br />
-                          </p>
+              <span className="icon">📅</span> 17 November - 22 November <br />
+              8:00 am - 10:00 pm
+            </p>
             <p>
               <span className="icon">📍</span> Annex, Eldoret, Kenya
             </p>

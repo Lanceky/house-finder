@@ -48,7 +48,7 @@ const About = () => {
 
         <div className="cta-container">
           <button className="cta-button">
-            Get Started
+            Get Personalized support from our agents
           </button>
         </div>
       </div>

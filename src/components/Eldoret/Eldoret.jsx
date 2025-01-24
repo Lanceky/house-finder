@@ -1,32 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './eldoret.css';
+import { Annex, Action, Chinese, EldoretTown, Elgon, Jerusalem, Juction, Kapseret, Kapsoya, 
+    Kimumu, Kiplomble, Marura, Outspan, Peris, Pioneer, Sogomo, West } from '../../places';
 
 const Eldoret = ({ onBack }) => {
-    return (
-        <div > 
-            <button onClick={onBack} className="back-button">
-                <span className="arrow">←</span>
-            </button>
-            <div className="locations-container ">
-                <div className="location-box" onClick={() => window.location.href = ''}>Action</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/annex.html'}>Annex</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/chinese.html'}>Chinese</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/eldoret.html'}>Eldoret</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/elgon-view.html'}>Elgon View</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/junction.html'}>Junction</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/jerusalem.html'}>Jerusalem</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/kapseret.html'}>Kapseret</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/kapsoya.html'}>Kapsoya</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/kimumu.html'}>Kimumu</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/kiplombe.html'}>Kiplombe</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/marura.html'}>Marura</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/outspan.html'}>Outspan</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/peris.html'}>Peris</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/pioneer.html'}>Pioneer</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/sogomo-mti-moja.html'}>Sogomo-Mti-Moja</div>
-                <div className="location-box" onClick={() => window.location.href = 'places/west-indies.html'}>West Indies</div>
-            </div>
+    const [selectedPlace, setSelectedPlace] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
+    const placeComponents = {
+        Action,
+        Annex,
+        Chinese,
+        Eldoret: EldoretTown,
+        'Elgon View': Elgon,
+        Jerusalem,
+        Junction: Juction,
+        Kapseret,
+        Kapsoya,
+        Kimumu,
+        Kiplombe: Kiplomble,
+        Marura,
+        Outspan,
+        Peris,
+        Pioneer,
+        'Sogomo-Mti-Moja': Sogomo,
+        'West Indies': West,
+    };
+
+    const handlePlaceClick = (place) => {
+        setIsLoading(true);
+        setSelectedPlace(place);
+
+        // Simulate loading delay
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    };
+
+    return (
+        <div>
+            <div className="locations-container">
+                <button onClick={onBack} className="back-button">
+                    <span className="arrow">←</span>
+                </button>
+                {!selectedPlace ? (
+                    Object.keys(placeComponents).map((place) => (
+                        <div
+                            key={place}
+                            className="location-box"
+                            onClick={() => handlePlaceClick(place)}
+                        >
+                            {place}
+                        </div>
+                    ))
+                ) : (
+                    <div className="map-section">
+                        {isLoading ? (
+                            <div className="loader">
+                                <div className="key-spinner">
+                                    <div className="key">🔑</div>
+                                    <div className="key">🔑</div>
+                                    <div className="key">🔑</div>
+                                </div>
+                                <p>Loading map...</p>
+                            </div>
+                        ) : (
+                            React.createElement(placeComponents[selectedPlace])
+                        )}
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
