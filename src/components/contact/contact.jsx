@@ -4,7 +4,7 @@ import { FaInstagram, FaWhatsapp, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <div className="contact-container">
+        <div className="contact-container" id="contact">
             <h2 className="contact-heading">Get in Touch</h2>
             <p className="contact-description">
                 Connect with us on social media or send us a message. We'd love to hear from you!

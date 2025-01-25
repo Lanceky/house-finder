@@ -32,7 +32,6 @@ const Footer = () => {
                         <h3>Follow Us</h3>
                         <div className="social-icons">
                             <a href="#" className="social-icon facebook">Facebook</a>
-                            <a href="#" className="social-icon whatsapp">WhatsApp</a>
                             <a href="#" className="social-icon instagram">Instagram</a>
                             
                         </div>
